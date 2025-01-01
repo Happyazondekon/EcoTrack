@@ -1,0 +1,5 @@
+.title-wrap {
+    word-wrap: break-word;  /* Permet de casser le mot si nécessaire */
+    white-space: normal;    /* Permet au texte de continuer sur la ligne suivante */
+    color: green;
+}
