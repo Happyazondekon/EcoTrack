@@ -1,66 +1,155 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# EcoTrack Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Overview
+EcoTrack is an application designed to help users measure, track, and reduce their carbon footprint. The platform provides tools to calculate emissions, explore informative articles, participate in ecological projects, and make donations to support carbon reduction initiatives. It is built with Laravel for the backend and React for the frontend, offering a modern, responsive, and interactive user experience.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Core Features
+- **Carbon Calculator**
+  - Calculate carbon emissions based on various categories (e.g., travel, home energy use).
+  - Provide actionable recommendations for reduction.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Articles Section**
+  - Browse and read articles related to sustainability and environmental conservation.
+  - Search functionality to find specific topics of interest.
 
-## Learning Laravel
+- **Donation Page**
+  - Support ecological projects through one-time or recurring donations.
+  - Include options for tribute donations with personalized messages.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **User Dashboard**
+  - Track past activities, calculations, and donations.
+  - Manage user profile and preferences.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Additional Features
+- **Multi-language Support**
+- **Responsive Design** for mobile and desktop users.
+- **Secure Authentication** with password encryption using Jasypt.
+- **Admin Panel** for managing articles, users, and donations.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Technologies Used
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Backend
+- **Laravel**
+  - RESTful API for handling user data, articles, and donations.
+  - Database management and migrations.
 
-### Premium Partners
+### Frontend
+- **React**
+  - User interface components.
+  - State management and interactivity.
+  
+### Database
+- **MySQL**
+  - Store user data, articles, and donation records.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### Styling
+- **Ant Design** for UI components.
+- **TailwindCSS** for custom styling.
+
+### Other Tools
+- **Axios** for API calls.
+- **Inertia.js** for seamless page transitions.
+- **Stripe/PayPal** for payment integration.
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+- PHP 8.x
+- Composer
+- Node.js (v16.x or higher)
+- MySQL
+- NPM or Yarn
+
+### Installation
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-repo/ecotrack.git
+   cd ecotrack
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   composer install
+   npm install
+   ```
+
+3. **Configure environment variables:**
+   - Copy `.env.example` to `.env`:
+     ```bash
+     cp .env.example .env
+     ```
+   - Set up database credentials, mail settings, and API keys in `.env`.
+
+4. **Run migrations and seed the database:**
+   ```bash
+   php artisan migrate --seed
+   ```
+
+5. **Build frontend assets:**
+   ```bash
+   npm run dev
+   ```
+
+6. **Start the development server:**
+   ```bash
+   php artisan serve
+   ```
+
+7. **Access the application:**
+   Open your browser and navigate to `http://localhost:8000`.
+
+---
+
+## Folder Structure
+
+```
+EcoTrack/
+├── app/          # Laravel application files
+├── public/       # Public assets
+├── resources/    # React components and views
+├── routes/       # Application routes
+├── database/     # Migrations and seeders
+├── tests/        # Test cases
+├── package.json  # Frontend dependencies
+├── webpack.mix.js# Laravel Mix configuration
+└── .env.example  # Environment variable example
+```
+
+---
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to the branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
 ## License
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+---
+
+## Contact
+For inquiries or support, contact the project team at [support@ecotrack.com](mailto:support@ecotrack.com).
+
